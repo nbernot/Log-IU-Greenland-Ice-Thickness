@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(10, activation='relu', input_shape=(3,)),
     tf.keras.layers.Dense(1)
@@ -11,7 +12,7 @@ model.compile(optimizer='adam', loss='mean_squared_error')
 model.summary()
 
 # Create dummy data
-import numpy as np
+
 x = np.random.random((5, 3))
 y = np.random.random((5, 1))
 
